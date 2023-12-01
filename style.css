@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.menu {
+    background-color: #0c0041;
+    width: 100%;
+    color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Agregado para permitir envolver en dispositivos móviles */
+}
+
+.menu ul li {
+    text-align: center;
+    padding: 15px 25px;
+    transition: background-color 0.3s;
+    position: relative;
+    flex: 1;
+    max-width: 200px; /* Limita el ancho máximo de los elementos del menú */
+    box-sizing: border-box;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none; 
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu ul li a i {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 2px;
+    transition: font-size 0.3s; /* Agregado para animar el cambio de tamaño del icono */
+}
+
+@media (max-width: 768px) {
+    .menu ul li a i {
+        font-size: 10px; /* Reducción del tamaño del icono en dispositivos móviles y tablets */
+    }
+}
+
+.menu ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.menu ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    border-radius: 5px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    z-index: 1;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul li .dropdown-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    transition: background-color 0.3s;
+}
+
+.menu ul li .dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.menu ul li .dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+}
+
+.menu ul li .dropdown-menu li:hover {
+    background-color: #555;
+}
+
+.menu ul li .dropdown-menu li:hover a {
+    color: #ffd700;
+}
